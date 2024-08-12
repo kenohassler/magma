@@ -5,7 +5,7 @@ apt-get update && \
     apt-get install -y make build-essential clang-9 git wget cmake subversion \
         ninja-build python-pip zlib1g-dev rustc cargo inotify-tools
 
-pip install lit
+pip install lit==12.0.0
 
 update-alternatives \
   --install /usr/lib/llvm              llvm             /usr/lib/llvm-9  20 \
