@@ -29,6 +29,7 @@ PREFIX="$FUZZER/repo/llvm_install" ./build/install_llvm.sh
 # Build Angora
 export PATH="$FUZZER/repo/llvm_install/clang+llvm/bin:$PATH"
 export LD_LIBRARY_PATH="$FUZZER/repo/llvm_install/clang+llvm/lib:$LD_LIBRARY_PATH"
+export RUSTFLAGS="$RUSTFLAGS -A invalid_reference_casting" cargo build
 ./build/build.sh
 
 # Compile angora_driver.c
